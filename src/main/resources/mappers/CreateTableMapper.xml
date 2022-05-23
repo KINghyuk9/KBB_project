@@ -19,7 +19,6 @@
             PLAYER_DEBUT       VARCHAR(50)  NOT NULL
         )
 
-            character = utf8;
     </select>
 
 </mapper>

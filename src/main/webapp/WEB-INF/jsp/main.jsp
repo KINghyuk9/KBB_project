@@ -8,14 +8,104 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>test</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqgrid/5.7.0/js/jquery.jqGrid.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqgrid/5.7.0/js/i18n/grid.locale-en.min.js" integrity="sha512-Oc3yFMZtHlWgPAVqS+azgzK1R519KJEYiBhi9yr+wdm5PfAJWz960R/EkSXTe352aEZyqVK88u/+qqHaqxaWbQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>test</title>
+    <script type="text/javascript">
+        let searchBtn = "";
+
+        let ColumnName = ['선수명', '나이', '등번호', '포지션', '데뷔일']
+        let ColumnModel = [
+            {name:'PLAYER_NAME'},
+            {name:'PLAYER_AGE'},
+            {name:'PLAYER_BACK_NUMBER'},
+            {name:'PLAYER_POSITION'},
+            {name: 'PLAYER_DEBUT'}
+        ];
+
+        $(function (){
+            $("#testTable").jqGrid({
+                datatype: "local",
+                height: 261,
+                width: 1019,
+                colNames: ColumnName,
+                colModel: ColumnModel,
+                pager: "pager"
+            });
+            $("#button1").on("click", function() {
+                console.log('click!')
+                searchData();
+            });
+        });
+
+        let data = {
+            // "CREATE_USER" : $("#CREATE_USER").val(),
+            // "CREATE_DT" : $("#CREATE_DT").val(),
+            // "REAMARK" : $("#REMARK").val(),
+            // "CD" : $("#CD").val(),
+            // "TYPE_CD" : $("#TYPE_CD").val(),
+
+        };
+
+        function searchData(){
+            $.ajax({
+                url : "/testToken",
+                type : "POST",
+                datatype : "json",
+                data : data,
+                success : function (list) {
+                    alert('조회 완료!')
+                    console.log(list)
+
+                    $('#testTable').clearGridData();
+                    $('#testTable').jqGrid('setGridParam', {data: list});
+                    $('#testTable').trigger('reloadGrid');
+                    // alert(data);
+                }
+            });
+        }
+        //     jQuery("#testTable").jqGrid({
+        //         url : '/testToken',
+        //         datatype : "json",
+        //         colNames : ColumnName ,
+        //         colModel: ColumnModel,
+        //         rowNum:10,
+        //         pager:'#pager',
+        //     });
+        //     jQuery("#testTable").jqGrid('navGrid','#pager',{edit:false,add:false,del:false});
+        // }
+
+
+
+    </script>
+
+
+
 </head>
 <body>
-    <h1>hI!</h1>
+<div id="loadingImg"></div>
+<div id="mainwrap">
+    <div id="headerWrap">
+        <h1>
+            <span class="logo"><a href="#"><img alt="로고" src="../../static/img/layout/logo.png" style="vertical-align: top;" /></a></span>
+        </h1>
+    </div>
+    <div class="table">
+        <table id="testTable"></table>
+        <div id="pager"></div>
+    </div>
+    <div class="button" >
+        <button id="button1">버튼1</button>
+
+    </div>
+</div>
+
+
+<%--    <div id="Btn" class="Btn">--%>
+<%--            <input type='button' value='조회'/>--%>
+<%--    </div>--%>
 </body>
 </html>

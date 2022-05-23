@@ -14,5 +14,8 @@ public class WebController {
         return "main";
     }
 
+    @GetMapping("/create")
+    public String create() { return "create";}
+
 }
 
