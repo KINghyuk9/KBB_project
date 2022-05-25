@@ -19,11 +19,11 @@
 
         let ColumnName = ['선수명', '나이', '등번호', '포지션', '데뷔일']
         let ColumnModel = [
-            {name:'PLAYER_NAME'},
-            {name:'PLAYER_AGE'},
-            {name:'PLAYER_BACK_NUMBER'},
-            {name:'PLAYER_POSITION'},
-            {name: 'PLAYER_DEBUT'}
+            {name:'PLAYER_NAME', align:'center'},
+            {name:'PLAYER_AGE', align:'center'},
+            {name:'PLAYER_BACK_NUMBER', align:'center'},
+            {name:'PLAYER_POSITION', align:'center'},
+            {name:'PLAYER_DEBUT', align:'center'}
         ];
 
         $(function (){
@@ -33,7 +33,7 @@
                 width: 1019,
                 colNames: ColumnName,
                 colModel: ColumnModel,
-                pager: "pager"
+                multiselect:true,
             });
             $("#button1").on("click", function() {
                 console.log('click!')
@@ -52,7 +52,7 @@
 
         function searchData(){
             $.ajax({
-                url : "/testToken",
+                url : "/player_list",
                 type : "POST",
                 datatype : "json",
                 data : data,
@@ -67,16 +67,7 @@
                 }
             });
         }
-        //     jQuery("#testTable").jqGrid({
-        //         url : '/testToken',
-        //         datatype : "json",
-        //         colNames : ColumnName ,
-        //         colModel: ColumnModel,
-        //         rowNum:10,
-        //         pager:'#pager',
-        //     });
-        //     jQuery("#testTable").jqGrid('navGrid','#pager',{edit:false,add:false,del:false});
-        // }
+
 
 
 
@@ -93,15 +84,21 @@
             <span class="logo"><a href="#"><img alt="로고" src="../../static/img/layout/logo.png" style="vertical-align: top;" /></a></span>
         </h1>
     </div>
-    <div class="table">
-        <table id="testTable"></table>
-        <div id="pager"></div>
-    </div>
-    <div class="button" >
-        <button id="button1">버튼1</button>
 
+</div>
+<div class="search">
+    <div class="button" style="float: right">
+        <span><a id="button1" style="cursor : pointer"><img alt="조회" src="../../static/img/content/search_btn.png"></a> </span>
     </div>
 </div>
+<%--<div class="button" >--%>
+<%--    <button id="button1">조회</button>--%>
+<%--</div>  --%>
+<div class="table">
+    <table id="testTable"></table>
+    <div id="pager" style="float: right"></div>
+</div>
+
 
 
 <%--    <div id="Btn" class="Btn">--%>
