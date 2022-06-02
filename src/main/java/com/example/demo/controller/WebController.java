@@ -6,16 +6,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/test")
+@RequestMapping("/KBB")
 public class WebController {
 
-    @GetMapping("/main")
-    public String main(){
-        return "main";
+    @GetMapping("/tigers_list")
+    public String tigers(){
+        return "tigers_list";
     }
-
     @GetMapping("/create")
     public String create() { return "create";}
+
+    @GetMapping("/home")
+    public String read() { return "home";}
 
 }
 

@@ -1,0 +1,65 @@
+﻿@charset "utf-8";
+
+body, div, p, h1, h2, h3, h4, h5, h6, ul, li, ol, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button { margin:0; padding:0; }
+body {font-size: 12px; font-family: "맑은고딕", Malgun Gothic, "돋움", Dotum, AppleGothic, Sans-serif;overflow-y:hidden; overflow-x:hidden; overflow:hidden; background:#F3F3F3;}
+ul, ol, li { list-style:none; }
+fieldset, form, button { border:0; }
+img { border:0; }
+hr, legend, caption { display:none }
+em, address { font-style:normal }
+table { border-collapse:collapse; }
+textarea { overflow:auto; border:1px solid #dedede; }
+.pdr10{padding-right:10px !important;}
+.pdt10{padding-top:10px !important;}
+input:-webkit-autofill {
+   -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+
+/* 링크 */
+a {color:#333;text-decoration:none;} a:hover {color:#0e70b4; text-decoration:underline;} a:focus {text-decoration:none; outline:1px dotted #000;}
+
+.blind { position:absolute; top:0; left:0; width:0; height:0; overflow:hidden; visibility:hidden; font-size:0; line-height:0; }
+#skip, .skip { display:none; width:0; height:0; overflow:hidden; }
+.checkbox { width:14px; height:14px; margin-bottom:0px; vertical-align:middle; border-width: 0px;margin-right:3px;}
+html:first-child select{padding-right:6px; height:20px;} /* Opera 9 & Below Fix */
+option {padding-right:6px;} /* Firefox Fix */
+legend {position:absolute; top:0; left:0; width:0; height:0; overflow:hidden; visibility:hidden; font-size:0; line-height:0;} /* For Screen Reader */
+
+/* 건너뛰기 */
+#skipnavi a {width:100%; position:absolute; display:block;left:0;top:-10000px;background:#2c7bbb;color:#fff;font-weight:bold;font-size:11px;text-align:center;z-index:2100}
+#skipnavi a:hover, #skipnavi a:focus, #skipnavi a:active {position: absolute;display:block; top: 0;left:0; width:100%;padding: 5px 0;background:#2c7bbb;color:#fff;}
+
+#wrap{display:table;}
+
+#login_wrap{position:absolute;height:100%; width:100%; border-top: 3px solid #0F257D;}
+.login_area{position:relative; left:50%; top:50%; margin-left:-280px; width:560px; height:640px; margin-top:-320px; background:#fff;border: 1px solid #D2D1D1;}
+.login_area .logo {position:absolute; top:50px; width:100%; text-align:center;}
+
+
+#login_box{position:absolute; top:230px; left:60px; background:#fff;  padding:30px 0px 0 0px; width:440px; height:330px;border-top:1px solid #1F88B8;border-bottom:1px solid #A9BCC0;}
+#login_box .login{display:inline-block;}
+
+.box_inp {position: relative;height: 68px;margin-top: 0px;border: 1px solid #7A7F97;font-size: 18px; width:438px;}
+.lab_g {position: absolute;top:17px;left: 35px;text-indent:-9999px;background: url('../img/login/id_bg.png') no-repeat;width:87px;height:35px;}
+.tf_g {display: block;width:290px;;margin: 14px 0 13px 140px;padding: 0 15px;border: 0;font-weight: bold;font-size: 20px;line-height: 2.0;vertical-align: middle;color: #1e1e1e;background-color: #fff;outline: 0;box-sizing: border-box;}
+.box_inp2 {position: relative;height: 68px;margin-top: 12px;border: 1px solid #7A7F97;font-size: 18px; width:438px;}
+.lab_g2 {position: absolute;top:17px;left: 35px;text-indent:-9999px;background: url('../img/login/pw_bg.png') no-repeat;width:87px;height:35px;}
+.tf_g2 {display: block;width:290px;;margin: 14px 0 13px 140px;padding: 0 15px;border: 0;font-weight: bold;font-size: 20px;line-height: 2.0;vertical-align: middle;color: #1e1e1e;background-color: #fff;outline: 0;box-sizing: border-box;}
+
+
+.btn-login{width:440px;box-sizing:border-box;position:absolute; top:500px;left:60px;}
+.login_btn01{ height:60px;font-size:20px; line-height:47px;width:100%; padding:0; -webkit-border-radius:7px; -moz-border-radius:7px; border-radius:7px;border: 1px solid #0F257D;background:#0F257D;color:#fff;}
+
+
+
+.login_check{position:absolute; top:435px; width:100%; text-align:right; color:#8A8A8A;}
+.checkTit{line-height:20px; padding-left:4px; margin-top:2px; text-align:right; letter-spacing:-0.5px; font-size:14px;}
+.checkTit span{display:inline-block;}
+.checkTit span img{width:24px; height:23px;vertical-align:middle !important; margin-top:-2px; padding-left:1px;}
+
+.keep{ float:right; margin-right:62px; margin-top:0px;}
+.keep strong{ color:#BCC1E1; font-weight:normal;}
+.keep a {color:#8A8A8A;text-decoration:none;}
+.keep a:hover {color:#8A8A8A; text-decoration:none;} .keep a:focus {text-decoration:none; outline:0px dotted #000;}
+
