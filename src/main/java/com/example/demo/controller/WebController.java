@@ -13,11 +13,14 @@ public class WebController {
     public String tigers(){
         return "tigers_list";
     }
+
     @GetMapping("/create")
     public String create() { return "create";}
 
     @GetMapping("/home")
     public String read() { return "home";}
 
+    @GetMapping("/main")
+    public String test() { return "main";}
 }
 

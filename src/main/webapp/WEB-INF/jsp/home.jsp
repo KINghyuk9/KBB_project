@@ -42,37 +42,31 @@
                                 <li><a class="menu_index" href="./tigers_list">엘지 트윈스</a></li>
                                 <li><a class="menu_index" href="./tigers_list">키움 히어로즈</a></li>
                                 <li><a class="menu_index" href="./tigers_list">케이티 위즈</a></li>
+                                <li><a class="menu_index" href="./tigers_list">MLB</a></li>
                             </ul>
                         </li>
                         <li class="menu_2">
                             <a class="menu_title_2"><i class="fa-solid fa-futbol"></i> 축 구</a>
                             <ul class="menu_2_content">
-                                <li><a class="menu_index" href="./tigers_list">기아 타이거즈</a></li>
-                                <li><a class="menu_index" href="./tigers_list">롯데 자이언츠</a></li>
-                                <li><a class="menu_index" href="./tigers_list">삼성 라이온즈</a></li>
-                                <li><a class="menu_index" href="./tigers_list">엔씨 다이노스</a></li>
-                                <li><a class="menu_index" href="./tigers_list">한화 이글스</a></li>
-                                <li><a class="menu_index" href="./tigers_list">SSG 랜더스</a></li>
-                                <li><a class="menu_index" href="./tigers_list">두산 베어스</a></li>
-                                <li><a class="menu_index" href="./tigers_list">엘지 트윈스</a></li>
-                                <li><a class="menu_index" href="./tigers_list">키움 히어로즈</a></li>
-                                <li><a class="menu_index" href="./tigers_list">케이티 위즈</a></li>
+                                <li><a class="menu_index" href="./tigers_list">국내 축구</a></li>
+                                <li><a class="menu_index" href="./tigers_list">해외 축구</a></li>
                             </ul>
                         </li>
                         <li class="menu_3">
                             <a class="menu_title_3"><i class="fa-solid fa-basketball"></i> 농 구</a>
                             <ul class="menu_3_content">
-                                <li><a class="menu_index" href="./tigers_list">기아 타이거즈</a></li>
-                                <li><a class="menu_index" href="./tigers_list">롯데 자이언츠</a></li>
-                                <li><a class="menu_index" href="./tigers_list">삼성 라이온즈</a></li>
-                                <li><a class="menu_index" href="./tigers_list">엔씨 다이노스</a></li>
-                                <li><a class="menu_index" href="./tigers_list">한화 이글스</a></li>
-                                <li><a class="menu_index" href="./tigers_list">SSG 랜더스</a></li>
-                                <li><a class="menu_index" href="./tigers_list">두산 베어스</a></li>
-                                <li><a class="menu_index" href="./tigers_list">엘지 트윈스</a></li>
-                                <li><a class="menu_index" href="./tigers_list">키움 히어로즈</a></li>
-                                <li><a class="menu_index" href="./tigers_list">케이티 위즈</a></li>
+                                <li><a class="menu_index" href="./tigers_list">국내 농구</a></li>
+                                <li><a class="menu_index" href="./tigers_list">해외 농구</a></li>
                             </ul>
+                        </li>
+                        <li class="menu_4">
+                            <a class="menu_title_4">뉴스</a>
+                        </li>
+                        <li class="menu_5">
+                            <a class="menu_title_4">이슈</a>
+                        </li>
+                        <li class="menu_6">
+                            <a class="menu_title_4">토론</a>
                         </li>
                     </ul>
                 </div>
