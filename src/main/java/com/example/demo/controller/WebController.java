@@ -22,5 +22,7 @@ public class WebController {
 
     @GetMapping("/main")
     public String test() { return "main";}
+
+
 }
 
