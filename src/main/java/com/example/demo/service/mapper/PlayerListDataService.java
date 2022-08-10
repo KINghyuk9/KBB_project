@@ -17,15 +17,15 @@ public class PlayerListDataService {
 
     private static String KBO_LIST_URL = "https://www.koreabaseball.com/Player/Register.aspx";
 
-    public List<PlayerListDTO> getplayerListDTOList() throws IOException {
+        @PostConstruct
+        public void getPlayerList() throws IOException {
 
-        List<PlayerListDTO> playerListDTOList = new ArrayList<>();
         Document doc = Jsoup.connect(KBO_LIST_URL).get();
         Elements contents = doc.select("table tbody tr");
 
         for (Element content : contents) {
             Elements tbContents = content.select("td");
-            PlayerListDTO playerListDTO = PlayerListDTO.builder()
+            PlayerListDTO playerList = PlayerListDTO.builder()
                     .BackNumber(Integer.parseInt(tbContents.get(0).text()))
                     .Name(tbContents.get(1).text())
                     .Type(tbContents.get(2).text())
@@ -33,8 +33,13 @@ public class PlayerListDataService {
                     .Size(tbContents.get(4).text())
                     .build();
 
-            playerListDTOList.add(playerListDTO);
+            System.out.println(playerList.toString());
         }
-        return playerListDTOList; // TODO: 컨트롤러와 뷰
     }
+//    @PostConstruct
+//    public void getPlayerList() throws IOException{
+//        Document doc = Jsoup.connect(KBO_LIST_URL).get();
+//        System.out.println(doc);
+//    }
+
 }

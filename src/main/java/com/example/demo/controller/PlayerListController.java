@@ -13,16 +13,16 @@ import java.util.List;
 @RequiredArgsConstructor
 @Controller
 public class PlayerListController {
-    private final PlayerListDataService playerListDataService;
-
-    @GetMapping("/KBB/listtest")
-    public String listtest(Model model) throws IOException {
-
-        List<PlayerListDTO> playerListDTOList = playerListDataService.getplayerListDTOList();
-
-        model.addAttribute("playerListDTOList", playerListDTOList);
-
-        return "listtest"; // TODO : controller와 view 구현이 안됨. thymeleaf의 구현방식을 jsp로 바꿔야함.
-    }
+//    private final PlayerListDataService playerListDataService;
+//
+//    @GetMapping("/KBB/listtest")
+//    public String listtest(Model model) throws IOException {
+//
+//        List<PlayerListDTO> playerListDTOList = playerListDataService.getplayerListDTOList();
+//
+//        model.addAttribute("playerListDTOList", playerListDTOList);
+//
+//        return "listtest"; // TODO : controller와 view 구현이 안됨. thymeleaf의 구현방식을 jsp로 바꿔야함.
+//    }
 
 }
