@@ -17,13 +17,12 @@ public class PlayerListDataService {
 
     private static String KBO_LIST_URL = "https://www.koreabaseball.com/Player/Register.aspx";
 
-        @PostConstruct
-        public void getPlayerList() throws IOException {
-
+    @PostConstruct
+    public void getPlayerList() throws IOException{
         Document doc = Jsoup.connect(KBO_LIST_URL).get();
         Elements contents = doc.select("table tbody tr");
 
-        for (Element content : contents) {
+        for(Element content :contents){
             Elements tbContents = content.select("td");
             PlayerListDTO playerList = PlayerListDTO.builder()
                     .BackNumber(Integer.parseInt(tbContents.get(0).text()))
@@ -35,11 +34,6 @@ public class PlayerListDataService {
 
             System.out.println(playerList.toString());
         }
-    }
-//    @PostConstruct
-//    public void getPlayerList() throws IOException{
-//        Document doc = Jsoup.connect(KBO_LIST_URL).get();
-//        System.out.println(doc);
-//    }
 
+    }
 }

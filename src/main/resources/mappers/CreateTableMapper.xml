@@ -20,5 +20,15 @@
         )
 
     </select>
+    
+    <select id="creaeteRegisterLsit">
+        CREATE TABLE REGISTER_LIST(
+            BACK_NUMBER         INT             NOT NULL ,
+            NAME                VARCHAR(200)    NOT NULL ,
+            TYPE                VARCHAR(20)     NOT NULL ,
+            BIRTHDAY            VARCHAR(50)     NOT NULL ,
+            SIZE                VARCHAR(30)     NOT NULL
+        )
+    </select>
 
 </mapper>
